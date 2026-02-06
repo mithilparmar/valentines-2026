@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Be My Valentine?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg">
+      <div class="blob blob-a"></div>
+      <div class="blob blob-b"></div>
+      <div class="blob blob-c"></div>
+    </div>
+
+    <section class="section game" id="game">
+      <div class="section-head">
+        <h3>Mini game: Match our moments</h3>
+        <p>Find all 8 pairs to unlock the big question.</p>
+      </div>
+      <div class="game-board" id="gameBoard">
+        <button class="game-card" data-id="1">
+          <div class="card-front">?</div>
+          <div class="card-back">
+            <img src="assets/image1.png" alt="Moment 1" />
+          </div>
+        </button>
+        <button class="game-card" data-id="2">
+          <div class="card-front">?</div>
+          <div class="card-back">
+            <img src="assets/image2.png" alt="Moment 2" />
+          </div>
+        </button>
+        <button class="game-card" data-id="3">
+          <div class="card-front">?</div>
+          <div class="card-back">
+            <img src="assets/image3.png" alt="Moment 3" />
+          </div>
+        </button>
+        <button class="game-card" data-id="4">
+          <div class="card-front">?</div>
+          <div class="card-back">
+            <img src="assets/image4.png" alt="Moment 4" />
+          </div>
+        </button>
+        <button class="game-card" data-id="5">
+          <div class="card-front">?</div>
+          <div class="card-back">
+            <img src="assets/image5.png" alt="Moment 5" />
+          </div>
+        </button>
+        <button class="game-card" data-id="6">
+          <div class="card-front">?</div>
+          <div class="card-back">
+            <img src="assets/image6.png" alt="Moment 6" />
+          </div>
+        </button>
+        <button class="game-card" data-id="7">
+          <div class="card-front">?</div>
+          <div class="card-back">
+            <img src="assets/image7.png" alt="Moment 7" />
+          </div>
+        </button>
+        <button class="game-card" data-id="8">
+          <div class="card-front">?</div>
+          <div class="card-back">
+            <img src="assets/image8.png" alt="Moment 8" />
+          </div>
+        </button>
+        <button class="game-card" data-id="1">
+          <div class="card-front">?</div>
+          <div class="card-back">
+            <img src="assets/image1.png" alt="Moment 1" />
+          </div>
+        </button>
+        <button class="game-card" data-id="2">
+          <div class="card-front">?</div>
+          <div class="card-back">
+            <img src="assets/image2.png" alt="Moment 2" />
+          </div>
+        </button>
+        <button class="game-card" data-id="3">
+          <div class="card-front">?</div>
+          <div class="card-back">
+            <img src="assets/image3.png" alt="Moment 3" />
+          </div>
+        </button>
+        <button class="game-card" data-id="4">
+          <div class="card-front">?</div>
+          <div class="card-back">
+            <img src="assets/image4.png" alt="Moment 4" />
+          </div>
+        </button>
+        <button class="game-card" data-id="5">
+          <div class="card-front">?</div>
+          <div class="card-back">
+            <img src="assets/image5.png" alt="Moment 5" />
+          </div>
+        </button>
+        <button class="game-card" data-id="6">
+          <div class="card-front">?</div>
+          <div class="card-back">
+            <img src="assets/image6.png" alt="Moment 6" />
+          </div>
+        </button>
+        <button class="game-card" data-id="7">
+          <div class="card-front">?</div>
+          <div class="card-back">
+            <img src="assets/image7.png" alt="Moment 7" />
+          </div>
+        </button>
+        <button class="game-card" data-id="8">
+          <div class="card-front">?</div>
+          <div class="card-back">
+            <img src="assets/image8.png" alt="Moment 8" />
+          </div>
+        </button>
+      </div>
+      <p class="game-status" id="gameStatus">Pairs found: 0 / 8</p>
+    </section>
+    <div class="intro" id="introScreen">
+      <div class="intro-count" id="introCount">3</div>
+      <div class="intro-card">
+        <p class="intro-line">Psst, Shuchi… I made a tiny game for you.</p>
+      </div>
+    </div>
+    <div class="win-overlay is-hidden" id="winOverlay">
+      <div class="win-card">
+        <h2>Unlocked!</h2>
+        <p>The rest of the surprise is ready.</p>
+      </div>
+    </div>
+
+    <header class="hero is-hidden" id="questionSection">
+      <p class="tag">for Shuchi, from Gotu</p>
+      <h1>Shuchi, will you be my valentine?</h1>
+      <p>You will not be able to say no. You can try though.</p>
+      <div class="cta-stack" id="ctaStack">
+        <div class="cta">
+          <button class="btn btn-yes" id="yesBtn">Yes</button>
+          <button class="btn btn-no" id="noBtn">No</button>
+        </div>
+        <img
+          class="cta-gif"
+          src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW5lenZyZHI5OXM2eW95b3pmMG40cWVrMDhtNjVuM3A4dGNxa2g2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VM1fcpu2bKs1e2Kdbj/giphy.gif"
+          alt="Cute animated gif"
+        />
+      </div>
+    </header>
+
+    <main class="is-hidden" id="mainContent">
+      <section class="section is-hidden" id="yesFlow">
+        <div class="section-head yes-head">
+          <h3>Knew you would say yes!</h3>
+        </div>
+        <img
+          class="yes-gif"
+          src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmo3c3l5ODh3ZGN6NHhhaDE2Mjg1ZjkwOXczdDFxbWM3dTBtaW9zaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9XY4f3FgFTT4QlaYqa/giphy.gif"
+          alt="Happy yes gif"
+        />
+        <div class="section-head date-head">
+          <h3>Choose our date idea</h3>
+          <p>Pick one and I will make it happen.</p>
+        </div>
+        <div class="choices" id="dateChoices">
+          <button class="choice">Picnic + Sunset</button>
+          <button class="choice">Movie + Homemade Snacks</button>
+          <button class="choice">Dinner + Dessert</button>
+        </div>
+      </section>
+    </main>
+
+    <div class="confetti" id="confetti"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
